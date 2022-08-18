@@ -1,0 +1,23 @@
+html
+  head
+    link(href='./css/style.min.css' rel='stylesheet')
+  body
+    include ./html/header
+    main.page
+      h1.class.rrrt привет как дела хорошо
+      img.jpg(src="./img/main/nier.webp", alt="Тут картинка")
+      img.icon(src="./img/svg/icon-1.svg", alt="иконка",)
+      svg(style='fill: #a2a2a2;')
+        use(xlink:href='./img/svg/sprite/sprite.svg#icon-1')
+      svg(style='fill: #a2a2a2;')
+        use(xlink:href='./img/svg/sprite/sprite.svg#icon-2')
+      svg(style='fill: #a2a2a2;')
+        use(xlink:href='./img/svg/sprite/sprite.svg#icon-3')
+      svg(style='fill: #a2a2a2;')
+        use(xlink:href='./img/svg/sprite/sprite.svg#icon-4')
+      svg(style='fill: #a2a2a2;')
+        use(xlink:href='./img/svg/sprite/sprite.svg#icon-5')
+      svg(style='fill: #a2a2a2;')
+        use(xlink:href='./img/svg/sprite/sprite.svg#icon-6')
+    include ./html/footer
+    script(src='./js/main.js' type='module')
