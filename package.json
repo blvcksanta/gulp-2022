@@ -15,7 +15,7 @@
     "del": "latest",
     "gulp": "latest",
     "gulp-fonter": "latest",
-    "gulp-group-css-media-queries": "^latest",
+    "gulp-group-css-media-queries": "latest",
     "gulp-htmlmin": "latest",
     "gulp-libsquoosh": "latest",
     "gulp-plumber": "latest",
