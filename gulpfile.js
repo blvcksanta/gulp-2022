@@ -20,7 +20,7 @@ import {scss} from './gulp/tasks/scss.js';
 import {js} from './gulp/tasks/js.js';
 import {img, svg} from './gulp/tasks/img.js';
 import {svgSprite} from './gulp/tasks/svgSprite.js';
-import {otfToTtf, ttfToWoff, woffToTtf} from './gulp/tasks/fonts.js';
+import {otfToTtf, ttfToWoff, copyWoff} from './gulp/tasks/fonts.js';
 
 //Наблюдатель
 function watcher () {
@@ -33,7 +33,7 @@ function watcher () {
 
 //Построение сценариев выполнения задач
 
-const fonts = gulp.series(woffToTtf, otfToTtf, ttfToWoff);
+const fonts = gulp.series(otfToTtf, ttfToWoff, copyWoff);
 
 const dev = gulp.series(
   reset,

@@ -10,12 +10,9 @@ export const otfToTtf = () => {
     .pipe(app.gulp.dest(`${app.path.sourceFolder}/fonts/`));
 };
 
-export const woffToTtf = () => {
-  return app.gulp.src(`${app.path.sourceFolder}/fonts/*.woff`)
-    .pipe(fonter({
-      formats: ['ttf'],
-    }))
-    .pipe(app.gulp.dest(`${app.path.sourceFolder}/fonts/`));
+export const copyWoff = () => {
+  return app.gulp.src(`${app.path.sourceFolder}/fonts/*.{woff,woff2}`)
+    .pipe(app.gulp.dest(app.path.build.fonts));
 }
 
 export const ttfToWoff = () => {
